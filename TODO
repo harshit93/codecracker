@@ -1,0 +1,23 @@
+* means TODO
++ means DONE
+
++ shift the checking part from Job to Checker
+
+* make Checker an abstract class, with different subclasses for types of checkers. Here are some I can think of
+    + CompareChecker   -- when problem asks for program from user, single answer correct
+    * VerifyChecker    -- when problem asks for program from user, multiple answers correct
+    
+    design them so that 'compile and execute' is an optional step, read from codecrackerdb from problems table
+    (useful for problems which ask for just output)
+
+* need 'compile and execute' classes for all supported languages, both for user programs and checkers.
+
+* Checker should count the number of test cases passed, iteratively checking all of them.
+
+* switch the MemCache class to a QByteArray based native class, in order to prevent memory copy of large input/output
+
+* allow web interface to upload questions, directly to db, with necessary input/output/checker files.
+
+* web interface
+    * backend in Django
+    * beautiful design using Bootstrap.js or maybe handwritten (can use a little help in this area).
